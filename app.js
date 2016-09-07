@@ -2,7 +2,7 @@ var animals = ['Cat', 'Dog', 'Lama', 'Hampster'];
 
 $(document).on('click','.animal', function() { 
 	var animal = $(this).data("name"); 
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&limit=10&api_key=dc6zaTOxFJmzC";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&limit=10&api_key=dc6zaTOxFJmzC";
 		$.ajax({url: queryURL, method: 'GET'})	 
 	 		.done(function(response) {
 	 			var str = JSON.stringify(response, undefined, 2);
